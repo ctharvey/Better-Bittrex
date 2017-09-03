@@ -1,15 +1,15 @@
 {
     "name": "Better Bittrex",
-    "version": "0.0.2",
+    "version": "0.0.3",
     "manifest_version": 2,
     "description": "Making using Bittrex just a little easier.",
     "icons": {
-        "16": "icons/16.png",
-        "48": "icons/48.png",
-        "128": "icons/128.png"
+        "16": "icons/BetterBittrex16.png",
+        "48": "icons/BetterBittrex48.png",
+        "128": "icons/BetterBittrex128.png"
     },
     "browser_action": {
-        "default_icon": "icons/128.png"
+        "default_icon": "icons/BetterBittrex128.png"
     },
     "default_locale": "en",
     "permissions": [

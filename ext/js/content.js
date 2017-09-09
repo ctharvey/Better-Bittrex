@@ -18,7 +18,8 @@ window.onload = function () {
         bitChart = document.getElementsByClassName("chart-wrapper");
         if (bitChart !== null) {
             chrome.storage.sync.get("savedIndicators", function (indicators) {
-                if (indicators && indicators.length === 0) {
+                console.log(indicators);
+                if ((indicators && indicators.length === 0) || indicators === undefined || jQuery.isEmptyObject(indicators)) {
                     indicators = [];
                     console.log(studyObj["Relative Strength Index"]);
                     indicators.push(studyObj["Relative Strength Index"]);
@@ -27,8 +28,10 @@ window.onload = function () {
                     console.log("push");
                     chrome.storage.sync.set({"savedIndicators": indicators}, function () {});
                 } else {
+                    console.log("error");
                     indicators = indicators["savedIndicators"];
                 }
+                console.log(indicators);
                 var studies = [];
                 $.each(indicators, function (index, value) {
                     var study = new Study(value.name, value.techName);
@@ -52,7 +55,7 @@ window.onload = function () {
                     "toolbar_bg": "#f1f3f6",
                     "withdateranges": true,
                     "hide_side_toolbar": false,
-                    "allow_symbol_change": true,
+                    "allow_symbol_change": false,
                     "save_image": false,
                     "hideideas": true,
                     "studies": studies,

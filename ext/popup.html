@@ -16,21 +16,66 @@ and open the template in the editor.
             #indContainer > div {
                 padding: 7px;
             }
+            h3 {
+                padding: 5px;
+                background : #3399ff;
+                border-bottom: 2px solid black;
+                border-radius: 5px 5px 0px 0px;
+                margin: 0px;
+                text-align: center;
+            }
             h3 > span {
                 font-size: smaller;
+            }
+            h5 {
+                margin: 0px;
+                padding: 5px;
+
             }
             .removeOption {
                 padding-left: 10px;
                 padding-right: 10px;
+                border: 2px black;
+                -webkit-box-shadow: inset 0px 0px 28px 6px rgba(0,0,0,0.75);
+                -moz-box-shadow: inset 0px 0px 28px 6px rgba(0,0,0,0.75);
+                box-shadow: inset 0px 0px 28px 6px rgba(0,0,0,0.75);
+                text-align: center;
+                color: white;
+
+            }
+            body {
+                padding: 0px;
+                margin: 0px;
+            }
+            #cont {
+            }
+            #selectcont {
+                padding:5px;
+            }
+            .removeOption {
+                margin: 5px;
+                background: #666666;
+                border: 1px;
+                border-radius: 3px;
+            }
+
+            .removeOption:hover {
+                background: #FF3B3F;
             }
         </style>
     </head>
-    <body style="width: 600px">
-        <h3>Active Indicators: <span>(Max of 3)</span> </h3>
-        <div id="indContainer"></div>
+    <body>
+        <div id="cont">
+            <h3>Active Indicators: <span>(Max of 3)</span> </h3>
+            <div id="indContainer"></div>
 
-        <select id="listOfStudies">
-            <option disabled selected value="0"> -- select a study to add -- </option>
-        </select>
+            <div id="selectcont">
+                <select id="listOfStudies">
+                    <option disabled selected value="0"> -- select a study to add -- </option>
+                </select>
+
+                <h5>Click to remove options</h5>
+            </div>
+        </div>
     </body>
 </html>

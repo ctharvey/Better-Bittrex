@@ -80,14 +80,11 @@ function syncList() {
         /*
          * @param {Study} value
          */
-        console.log(indicators);
+//        console.log(indicators);
         $.each(indicators, function (index, value) {
             console.log(index);
             console.log(value);
-            var appendDiv = $("<div>", {"class": "optionContainer op" + index, "data-index": index});
-            var removeSpan = $("<a>", {"class": "removeOption", "data-index": index, "href": "#"});
-            removeSpan.text("X");
-            appendDiv.append(removeSpan);
+            var appendDiv = $("<div>", {"class": "removeOption optionContainer op" + index, "data-index": index});
             var dataSpan = $("<span>");
             dataSpan.text(value.name);
             appendDiv.append(dataSpan);
